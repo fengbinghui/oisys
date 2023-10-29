@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.njcit.mapper.CourseManageMapper">
+    <resultMap id="CourseManageResult" type="CourseManage">
+        <id property="id" column="id"/>
+        <result property="courseNo" column="course_no"/>
+        <result property="teacherNo" column="teacher_no"/>
+        <result property="courseName" column="course_name"/>
+        <result property="teacherName" column="teacher_name"/>
+        <result property="classNo" column="class_no"/>
+        <result property="className" column="class_name"/>
+        <collection property="attendClassSettings" javaType="List" ofType="AttendClassSetting">
+            <result property="courseId" column="course_id"/>
+            <result property="attendClassWeek" column="attend_class_week"/>
+            <result property="startTime" column="start_time"/>
+            <result property="endTime" column="end_time"/>
+            <result property="address" column="address"/>
+        </collection>
+    </resultMap>
+
+    <resultMap id="teacherResult" type="User">
+        <id property="classId" column="class_id"/>
+        <association property="oiClass" javaType="OIClass" column="class_id"
+                     select="cn.njcit.mapper.ClassMapper.selectById"/>
+    </resultMap>
+
+    <select id="getAllCourseManage" resultMap="CourseManageResult">
+        select *
+        from aoa_course_manage,
+             aoa_attend_class_setting
+        where aoa_course_manage.id = aoa_attend_class_setting.course_id
+    </select>
+
+    <select id="getCourseManageByName" parameterType="String" resultMap="CourseManageResult">
+        select *
+        from aoa_course_manage
+        where course_name like "%"#{searchName}"%"
+    </select>
+    <select id="getAllTeachers" resultMap="teacherResult">
+        select *
+        from aoa_teacher
+    </select>
+    <select id="getCourseManageById" resultMap="CourseManageResult">
+        select *
+        from aoa_course_manage
+        where id = #{id}
+    </select>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.njcit.mapper.CourseMapper">
+
+    <resultMap id="courseResult" type="Course">
+        <id property="id" column="id"/>
+        <result property="courseNo" column="course_no"/>
+        <result property="courseName" column="course_name"/>
+    </resultMap>
+
+    <select id="getAllCourses" resultMap="courseResult">
+        select *
+        from aoa_course
+    </select>
+
+    <select id="getCourseById" parameterType="Long" resultMap="courseResult">
+        select * from aoa_course where id=#{id}
+    </select>
+
+    <select id="searchCourses" parameterType="String" resultMap="courseResult">
+        select * from aoa_course where course_no like "%"#{searchName}"%" OR course_name like "%"#{searchName}"%"
+    </select>
+
+    <delete id="deleteCourse" parameterType="Long">
+        delete from aoa_course where id=#{id}
+    </delete>
+</mapper>
