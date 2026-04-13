@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 
@@ -52,7 +51,7 @@ public class ClassController {
                 return ResponseResult.error("班级编号被占用，请换一个");
             }
         }
-        return classService.saveOrUpdate(oiClass) ? ResponseResult.ok("保存成功") : ResponseResult.ok("保存失败");
+        return classService.saveOrUpdate(oiClass) ? ResponseResult.ok("保存成功") : ResponseResult.error("保存失败");
     }
 
     /**
@@ -63,6 +62,6 @@ public class ClassController {
      */
     @DeleteMapping("remove")
     public ResponseResult removeById(Long classId) {
-        return classService.deleteById(classId) ? ResponseResult.ok("删除成功") : ResponseResult.ok("删除失败");
+        return classService.deleteById(classId) ? ResponseResult.ok("删除成功") : ResponseResult.error("删除失败");
     }
 }

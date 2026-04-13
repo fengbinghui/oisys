@@ -34,8 +34,18 @@ public class User implements Serializable {
         this.oiClass = oiClass;
     }
 
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
     @TableField(exist = false)
     private OIClass oiClass;// 补充了班级对象
+    @TableField(exist = false)
+    private String roleName;
 
     @TableId(value = "user_id", type = IdType.AUTO)
     private Long userId;

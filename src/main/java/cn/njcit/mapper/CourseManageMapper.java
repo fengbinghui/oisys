@@ -26,5 +26,8 @@ public interface CourseManageMapper extends BaseMapper<CourseManage> {
 
     // 查询所有课程安排信息
     public List<CourseManage> getAllCourseManage();
+
+    // 按照id删除
+    public boolean deleteCourseManage(Long id);
 }
 

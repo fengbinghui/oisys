@@ -23,6 +23,10 @@
         <association property="oiClass" javaType="OIClass" column="class_id"
                      select="cn.njcit.mapper.ClassMapper.selectById"/>
     </resultMap>
+    <delete id="deleteCourseManage" parameterType="Long">
+        delete from aoa_course_manage
+        where id = #{id}
+    </delete>
 
     <select id="getAllCourseManage" resultMap="CourseManageResult">
         select *

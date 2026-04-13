@@ -1,6 +1,7 @@
 package cn.njcit.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -188,18 +189,19 @@ public class CourseManage implements Serializable {
     @Override
     public String toString() {
         return "CourseManage{" +
-                "id = " + id +
-                ", courseNo = " + courseNo +
-                ", courseName = " + courseName +
-                ", teacherNo = " + teacherNo +
-                ", teacherName = " + teacherName +
-                ", classNo = " + classNo +
-                ", className = " + className +
-                ", createTime = " + createTime +
-                ", updateTime = " + updateTime +
-                ", createUser = " + createUser +
-                ", updateUser = " + updateUser +
-                ", delFlag = " + delFlag +
-                "}";
+                "id=" + id +
+                ", courseNo='" + courseNo + '\'' +
+                ", courseName='" + courseName + '\'' +
+                ", teacherNo='" + teacherNo + '\'' +
+                ", teacherName='" + teacherName + '\'' +
+                ", classNo='" + classNo + '\'' +
+                ", className='" + className + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", createUser='" + createUser + '\'' +
+                ", updateUser='" + updateUser + '\'' +
+                ", delFlag=" + delFlag +
+                ", attendClassSettings=" + attendClassSettings +
+                '}';
     }
 }

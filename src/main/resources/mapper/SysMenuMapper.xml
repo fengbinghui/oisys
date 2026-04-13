@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.njcit.mapper.SysMenuMapper">
+    <select id="searchMenus" resultType="cn.njcit.entity.SysMenu">
+        select menu_id, is_show, menu_grade, menu_icon, menu_name, menu_url, parent_id, sort_id
+        from aoa_sys_menu
+        where menu_name like "%"#{searchName}"%"
+        order by sort_id asc, menu_id asc
+    </select>
+
+    <select id="getMenusByRoleId" resultType="cn.njcit.entity.SysMenu">
+        select m.menu_id, m.is_show, m.menu_grade, m.menu_icon, m.menu_name, m.menu_url, m.parent_id, m.sort_id
+        from aoa_sys_menu m
+                 inner join aoa_role_power_list rp on m.menu_id = rp.menu_id
+        where rp.role_id = #{roleId}
+          and (rp.is_show is null or rp.is_show = 1)
+          and (m.is_show is null or m.is_show = 1)
+        order by m.sort_id asc, m.menu_id asc
+    </select>
+</mapper>

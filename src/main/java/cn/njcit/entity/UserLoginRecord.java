@@ -1,6 +1,7 @@
 package cn.njcit.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -32,6 +33,8 @@ public class UserLoginRecord implements Serializable {
     private String sessionId;
 
     private Long userId;
+    @TableField(exist = false)
+    private String realName;
 
     public Long getRecordId() {
         return recordId;
@@ -79,6 +82,14 @@ public class UserLoginRecord implements Serializable {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
     }
 
     @Override

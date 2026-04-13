@@ -24,6 +24,90 @@ public class AttendsList implements Serializable {
     @TableId(value = "attends_id", type = IdType.AUTO)
     private Long attendsId;
 
+    public String getRealName() {
+        return realName;
+    }
+
+    private String userName;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
+
+    private String realName;
+
+    private String className;
+    private String courseNo;
+    private String courseName;
+    private String teacherName;
+    private String typeName;
+    private String statusName;
+    private String clockTypeName;
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
+
+    public String getCourseNo() {
+        return courseNo;
+    }
+
+    public void setCourseNo(String courseNo) {
+        this.courseNo = courseNo;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public String getTeacherName() {
+        return teacherName;
+    }
+
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
+    }
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
+
+    public String getStatusName() {
+        return statusName;
+    }
+
+    public void setStatusName(String statusName) {
+        this.statusName = statusName;
+    }
+
+    public String getClockTypeName() {
+        return clockTypeName;
+    }
+
+    public void setClockTypeName(String clockTypeName) {
+        this.clockTypeName = clockTypeName;
+    }
+
     /**
      * 经度
      */
@@ -230,6 +314,77 @@ public class AttendsList implements Serializable {
 
     public void setSettingId(Long settingId) {
         this.settingId = settingId;
+    }
+
+
+    /**
+     * 打卡的所有状态
+     *
+     * @return
+     */
+
+    private int normal;
+    private int late;
+    private int earlyLeave;
+    private int absent;
+    private int leave;
+    private int makeup;
+    private int missingCard;
+
+    public int getNormal() {
+        return normal;
+    }
+
+    public void setNormal(int normal) {
+        this.normal = normal;
+    }
+
+    public int getLate() {
+        return late;
+    }
+
+    public void setLate(int late) {
+        this.late = late;
+    }
+
+    public int getEarlyLeave() {
+        return earlyLeave;
+    }
+
+    public void setEarlyLeave(int earlyLeave) {
+        this.earlyLeave = earlyLeave;
+    }
+
+    public int getAbsent() {
+        return absent;
+    }
+
+    public void setAbsent(int absent) {
+        this.absent = absent;
+    }
+
+    public int getLeave() {
+        return leave;
+    }
+
+    public void setLeave(int leave) {
+        this.leave = leave;
+    }
+
+    public int getMakeup() {
+        return makeup;
+    }
+
+    public void setMakeup(int makeup) {
+        this.makeup = makeup;
+    }
+
+    public int getMissingCard() {
+        return missingCard;
+    }
+
+    public void setMissingCard(int missingCard) {
+        this.missingCard = missingCard;
     }
 
     @Override

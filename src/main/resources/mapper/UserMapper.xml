@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.njcit.mapper.UserMapper">
+    <sql id="studentBaseCondition">
+        role_id = 4
+        and is_lock = 0
+    </sql>
 
     <resultMap id="studentResult" type="User">
         <id property="classId" column="class_id"/>
@@ -11,17 +15,25 @@
     <select id="getAllStudents" resultMap="studentResult">
         select *
         from aoa_user
-        where role_id = 4
-          and is_lock = 0
+        where <include refid="studentBaseCondition"/>
     </select>
 
     <select id="searchStudents" parameterType="String" resultMap="studentResult">
-        select * from aoa_user where role_id=4 and is_lock=0 and
+        select * from aoa_user where <include refid="studentBaseCondition"/> and
             real_name like "%"#{searchName}"%"
     </select>
 
     <select id="getStudentById" parameterType="Long" resultMap="studentResult">
-        select * from aoa_user where role_id=4 and  is_lock=0 and user_id=#{id}
+        select * from aoa_user where <include refid="studentBaseCondition"/> and user_id=#{id}
+    </select>
+
+    <select id="searchUsers" resultType="cn.njcit.entity.User">
+        select u.*, r.role_name
+        from aoa_user u
+                 left join aoa_role_ r on u.role_id = r.role_id
+        where (u.real_name like "%"#{searchName}"%" or u.user_name like "%"#{searchName}"%")
+          and u.is_lock = 0
+        order by u.user_id desc
     </select>
 </mapper>
 

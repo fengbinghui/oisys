@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="29b09c63-5be3-4d68-8fd6-5c9440b5fd4d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/controller/AttendClassSettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/controller/AttendClassSettingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/controller/AttendsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/controller/AttendsListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/controller/ClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/controller/ClassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/controller/CourseManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/controller/CourseManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/entity/AttendsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/entity/AttendsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/entity/CourseManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/entity/CourseManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/mapper/AttendClassSettingMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/mapper/AttendClassSettingMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/mapper/AttendsListMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/mapper/AttendsListMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/mapper/CourseManageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/mapper/CourseManageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/service/IAttendClassSettingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/service/IAttendClassSettingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/service/IAttendsListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/service/IAttendsListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/service/ICourseManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/service/ICourseManageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/service/impl/AttendClassSettingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/service/impl/AttendClassSettingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/service/impl/AttendsListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/service/impl/AttendsListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/service/impl/CourseManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/service/impl/CourseManageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/njcit/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/njcit/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AttendClassSettingMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AttendClassSettingMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AttendsListMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AttendsListMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CourseManageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CourseManageMapper.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\maven\apache-maven-3.6.1\repository" />
+        <option name="mavenHome" value="E:/maven/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="E:\maven\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2XCL3epFlMktxQHNXYYiVEEgMiW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/人工智能实训/oisys&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;f85d3abc19c4619409874733a0e1f644&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\人工智能实训\oisys\src\main\resources" />
+      <recent name="F:\人工智能实训\oisys\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.OIApplication">
+    <configuration name="Gen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Gen" />
+      <module name="oisys" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OIApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="oisys" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.njcit.OIApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.njcit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.OIApplication" />
+        <item itemvalue="Application.Gen" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29b09c63-5be3-4d68-8fd6-5c9440b5fd4d" name="Changes" comment="" />
+      <created>1698127916571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698127916571</updated>
+      <workItem from="1698127917670" duration="1990000" />
+      <workItem from="1698129996553" duration="251000" />
+      <workItem from="1698130270953" duration="39000" />
+      <workItem from="1698130323630" duration="4158000" />
+      <workItem from="1698135625688" duration="86000" />
+      <workItem from="1698139482361" duration="9657000" />
+      <workItem from="1698208006760" duration="66000" />
+      <workItem from="1698243032955" duration="2691000" />
+      <workItem from="1698289568922" duration="13000" />
+      <workItem from="1698289883384" duration="4000" />
+      <workItem from="1698311697882" duration="761000" />
+      <workItem from="1698325427356" duration="1081000" />
+      <workItem from="1698365444153" duration="25000" />
+      <workItem from="1698396845807" duration="372000" />
+      <workItem from="1698584643402" duration="1140000" />
+      <workItem from="1698587294121" duration="591000" />
+      <workItem from="1698730443402" duration="225000" />
+      <workItem from="1698732131156" duration="3484000" />
+      <workItem from="1698770714978" duration="71000" />
+      <workItem from="1698910558470" duration="904000" />
+      <workItem from="1698911495202" duration="489000" />
+      <workItem from="1698932074585" duration="282000" />
+      <workItem from="1698970725661" duration="5482000" />
+      <workItem from="1698983710530" duration="637000" />
+      <workItem from="1699056417252" duration="10317000" />
+      <workItem from="1699071670802" duration="1388000" />
+      <workItem from="1699082075675" duration="13317000" />
+      <workItem from="1699142805415" duration="3233000" />
+      <workItem from="1699146742953" duration="1658000" />
+      <workItem from="1699150410398" duration="4844000" />
+      <workItem from="1700239121906" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

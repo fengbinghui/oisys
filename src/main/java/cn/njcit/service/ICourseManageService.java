@@ -1,5 +1,6 @@
 package cn.njcit.service;
 
+import cn.njcit.entity.AttendClassSetting;
 import cn.njcit.entity.CourseManage;
 import cn.njcit.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -22,4 +23,8 @@ public interface ICourseManageService extends IService<CourseManage> {
     public List<User> getAllTeachers();
     //通过id查询课程安排
     public List<CourseManage> getCourseManageById(Long id);
+    //按照id删除
+    public  boolean deleteCourseManage(Long id);
+
+    boolean saveCourseManageWithSettings(CourseManage courseManage, List<AttendClassSetting> settings);
 }

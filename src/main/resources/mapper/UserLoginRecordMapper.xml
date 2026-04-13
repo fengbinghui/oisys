@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.njcit.mapper.UserLoginRecordMapper">
-
+    <select id="searchLoginRecords" resultType="cn.njcit.entity.UserLoginRecord">
+        select r.record_id,
+               r.browser,
+               r.ip_addr,
+               r.login_time,
+               r.session_id,
+               r.user_id,
+               u.real_name
+        from aoa_user_login_record r
+                 left join aoa_user u on u.user_id = r.user_id
+        where u.real_name like "%"#{searchName}"%"
+           or u.user_name like "%"#{searchName}"%"
+        order by r.login_time desc
+    </select>
 </mapper>

@@ -42,4 +42,6 @@ public interface IUserService extends IService<User> {
      * @return：上传成功后的头像文文件名
      */
     public String upload(MultipartFile file) throws IllegalStateException, IOException;
+
+    PageInfo<User> getUserList(Integer page, String searchName);
 }

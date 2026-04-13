@@ -2,6 +2,7 @@ package cn.njcit.mapper;
 
 import cn.njcit.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -30,6 +31,8 @@ public interface UserMapper extends BaseMapper<User> {
      * @return：学生对象
      */
     public User getStudentById(Long id);
+
+    List<User> searchUsers(@Param("searchName") String searchName);
 
 
 }

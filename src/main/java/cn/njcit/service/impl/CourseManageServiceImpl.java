@@ -1,13 +1,18 @@
 package cn.njcit.service.impl;
 
+import cn.njcit.entity.AttendClassSetting;
 import cn.njcit.entity.CourseManage;
 import cn.njcit.entity.User;
+import cn.njcit.mapper.AttendClassSettingMapper;
 import cn.njcit.mapper.CourseManageMapper;
 import cn.njcit.service.ICourseManageService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,6 +27,8 @@ import java.util.List;
 @Service
 public class CourseManageServiceImpl extends ServiceImpl<CourseManageMapper, CourseManage> implements ICourseManageService {
     private final int PAGE_SIZE = 6;// 每页展示的条数
+    @Autowired
+    private AttendClassSettingMapper attendClassSettingMapper;
 
     @Override
     public PageInfo<CourseManage> getCourseManageList(Integer page, String searchName) {
@@ -45,6 +52,31 @@ public class CourseManageServiceImpl extends ServiceImpl<CourseManageMapper, Cou
     public List<CourseManage> getCourseManageById(Long id) {
         List<CourseManage> courseManageById = baseMapper.getCourseManageById(id);
         return courseManageById;
+    }
+
+    @Override
+    public boolean deleteCourseManage(Long id) {
+        return baseMapper.deleteCourseManage(id);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean saveCourseManageWithSettings(CourseManage courseManage, List<AttendClassSetting> settings) {
+        boolean saved = this.saveOrUpdate(courseManage);
+        if (!saved) {
+            return false;
+        }
+        QueryWrapper<AttendClassSetting> wrapper = new QueryWrapper<>();
+        wrapper.eq("course_id", courseManage.getId());
+        attendClassSettingMapper.delete(wrapper);
+
+        if (settings != null) {
+            for (AttendClassSetting setting : settings) {
+                setting.setCourseId(courseManage.getId());
+                attendClassSettingMapper.insert(setting);
+            }
+        }
+        return true;
     }
 
 }

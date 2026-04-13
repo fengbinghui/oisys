@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 
@@ -27,7 +26,6 @@ public class CourseController {
 
     /**
      * 指定页号,查询所有课程信息
-     *
      * @param page:页号
      * @return: 响应消息携带课程
      */
@@ -40,7 +38,6 @@ public class CourseController {
 
     /**
      * 新增或者修改课程信息第一步。如果是新增课程，返回课程列表；如果是修改课程信息，返回按照id查询到的课程信息
-     *
      * @param id：班级的编号，可能为null，如果为null则是新增班级
      * @return: ResponseResult(, 班级对象)
      */
@@ -54,9 +51,9 @@ public class CourseController {
         return responseResult;
     }
 
+
     /**
      * insert/update课程信息，如果curse对象中的课程编号不是空，表示更新，如果课程编号是空，表示新增课程
-     *
      * @param course :课程对象
      * @return : 课程编号重复(新增时),error(被占用)，正常新增或更新:ok("保存成功"),新增或更新出错:error(保存失败)
      * @throws :InterruptedException
@@ -72,12 +69,12 @@ public class CourseController {
                 return ResponseResult.error("课程编号被占用，请换一个！");// 班级名被占用，返回错误信息
             }
         }
+        // 保存或者更新
         return courseService.saveOrUpdate(course) ? ResponseResult.ok("保存成功！") : ResponseResult.error("保存失败！");
     }
 
     /**
      * 按照id删除课程
-     *
      * @param id:课程id
      * @return : 删除成功，失败
      */

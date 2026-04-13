@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.njcit.mapper.AttendsListMapper">
+    <resultMap id="attendsListsResult" type="AttendsList">
+        <id property="attendsId" column="attends_id"/>
+        <result property="realName" column="real_name"/>
+        <result property="className" column="class_name"/>
+        <result property="statusId" column="status_id"/>
+    </resultMap>
 
+    <select id="getAttendsByDate" resultMap="attendsListsResult">
+        SELECT u.user_name                                        AS student_number,
+               u.real_name                                        AS student_name,
+               c.class_name                                       AS class_name,
+               SUM(CASE WHEN al.status_id = 10 THEN 1 ELSE 0 END) AS normal,
+               SUM(CASE WHEN al.status_id = 11 THEN 1 ELSE 0 END) AS late,
+               SUM(CASE WHEN al.status_id = 12 THEN 1 ELSE 0 END) AS early_leave,
+               SUM(CASE WHEN al.status_id = 13 THEN 1 ELSE 0 END) AS absent,
+               SUM(CASE WHEN al.status_id = 46 THEN 1 ELSE 0 END) AS `LEAVE`,
+               SUM(CASE WHEN al.status_id = 47 THEN 1 ELSE 0 END) AS makeup,
+               SUM(CASE WHEN al.status_id = 48 THEN 1 ELSE 0 END) AS missing_card
+        FROM aoa_user AS u
+                 LEFT JOIN
+             aoa_class AS c ON u.class_id = c.class_id
+                 LEFT JOIN
+             aoa_attends_list AS al ON u.user_id = al.attends_user_id
+        WHERE u.entrance_date = #{searchDate}
+        GROUP BY u.user_id, u.user_name, c.class_name;
+    </select>
 </mapper>

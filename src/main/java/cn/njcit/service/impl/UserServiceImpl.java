@@ -10,7 +10,6 @@ import com.github.pagehelper.util.StringUtil;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -92,5 +91,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }
     }
 
-
+    @Override
+    public PageInfo<User> getUserList(Integer page, String searchName) {
+        PageHelper.startPage(page, PAGE_SIZE);
+        List<User> users;
+        if (searchName == null || searchName.trim().isEmpty()) {
+            users = baseMapper.searchUsers("");
+        } else {
+            users = baseMapper.searchUsers(searchName);
+        }
+        return new PageInfo<>(users);
+    }
 }
