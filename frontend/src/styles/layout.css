@@ -1,0 +1,64 @@
+.main .smallDiv {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.app-topbar {
+  align-items: center;
+  background: var(--surface-color);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: flex-end;
+  min-height: 52px;
+  padding-right: 6px;
+}
+
+.app-topbar .navbar-right > li > a {
+  color: var(--text-regular);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.app-topbar .navbar-right > li > a:hover {
+  background: #f5f7fa;
+  color: var(--text-primary);
+}
+
+.app-sidebar .list-left {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+.app-sidebar .open-menu {
+  transition: background-color 0.2s ease;
+}
+
+.app-sidebar .open-menu:hover {
+  background: var(--layout-sidebar-bg-hover);
+}
+
+.app-sidebar #accordion .panel-default > .panel-heading,
+.app-sidebar .panel {
+  background-color: var(--layout-sidebar-bg);
+}
+
+.app-sidebar #accordion .panel .panel-collapse {
+  background: #18222c;
+}
+
+.app-sidebar #accordion a {
+  color: #c0c4cc;
+  transition: all 0.2s ease;
+}
+
+.app-sidebar #accordion .panel-collapse a:hover,
+.app-sidebar #accordion .open-menu:hover {
+  color: #fff;
+}
+
+.app-sidebar .panel-collapse a.router-link-exact-active,
+.app-sidebar .panel-collapse a.router-link-active {
+  color: #fff;
+  font-weight: 600;
+}

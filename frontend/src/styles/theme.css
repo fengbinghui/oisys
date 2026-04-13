@@ -1,0 +1,118 @@
+:root {
+  --primary-color: #409eff;
+  --primary-hover: #66b1ff;
+  --primary-soft: #ecf5ff;
+  --danger-color: #f56c6c;
+  --success-color: #67c23a;
+  --text-primary: #303133;
+  --text-regular: #606266;
+  --text-secondary: #909399;
+  --surface-color: #ffffff;
+  --page-bg: #f5f7fa;
+  --layout-body-bg: #f3f6fb;
+  --layout-sidebar-bg: #1f2d3d;
+  --layout-sidebar-bg-hover: #324057;
+  --layout-sidebar-input-bg: #324157;
+  --border-color: #dcdfe6;
+  --border-light: #ebeef5;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text-regular);
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.btn {
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.btn:focus,
+.btn:active:focus,
+a:focus {
+  outline: none !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.form-control,
+.el-input__inner {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: none;
+  height: 34px;
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus,
+.el-input__inner:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-soft);
+}
+
+.table,
+.el-table {
+  background: var(--surface-color);
+}
+
+.table > tbody > tr:hover > td,
+.el-table__body tr:hover > td {
+  background: #f9fbff !important;
+}
+
+.table > thead > tr > th,
+.el-table th.el-table__cell {
+  background: #f8fafc;
+  color: var(--text-primary);
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  border-radius: var(--radius-sm);
+  color: var(--text-regular);
+}
+
+.pagination > .active > a,
+.pagination > .active > span {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.el-button--primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.el-button--primary:hover,
+.el-button--primary:focus {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.label {
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+.label-info {
+  background-color: #409eff;
+}
+
+.label-danger {
+  background-color: #f56c6c;
+}

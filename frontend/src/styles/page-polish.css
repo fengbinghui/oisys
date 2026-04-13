@@ -1,0 +1,141 @@
+.app-content-wrapper .row[style*="padding-top: 10px"] {
+  margin: 0;
+  padding-top: 12px !important;
+}
+
+.app-content-wrapper .row[style*="padding-top: 15px"] {
+  margin: 0;
+  padding-top: 12px !important;
+}
+
+.app-content-wrapper h1[style*="font-size: 24px"] {
+  color: var(--text-primary);
+  font-size: 22px !important;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.app-content-wrapper .bgc-w.box,
+.app-content-wrapper .box {
+  background: var(--surface-color);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.app-content-wrapper .box-header {
+  align-items: center;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 12px 16px;
+}
+
+.app-content-wrapper .box-title {
+  display: flex;
+  gap: 8px;
+}
+
+.app-content-wrapper .box-title .label {
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 500;
+  gap: 4px;
+  line-height: 1.4;
+  padding: 6px 10px !important;
+}
+
+.app-content-wrapper .box-title .label-success {
+  background: var(--primary-color);
+}
+
+.app-content-wrapper .box-title .label-default {
+  background: #909399;
+}
+
+.app-content-wrapper .box-tools .input-group[style*="width"] {
+  width: 220px !important;
+}
+
+.app-content-wrapper .box-body {
+  padding: 16px;
+}
+
+.app-content-wrapper .box-body.no-padding {
+  padding: 12px 16px 0;
+}
+
+.app-content-wrapper .table-responsive {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.app-content-wrapper .table {
+  margin-bottom: 0;
+}
+
+.app-content-wrapper .table > tbody > tr > th {
+  background: #f8fafc;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.app-content-wrapper .table > tbody > tr > td {
+  border-color: #eef1f6;
+  color: var(--text-regular);
+  vertical-align: middle;
+}
+
+.app-content-wrapper .box-footer {
+  background: #fafbfd;
+  border-top: 1px solid var(--border-light);
+  padding: 12px 16px;
+}
+
+.app-content-wrapper .box-footer .btn + .btn {
+  margin-left: 8px;
+}
+
+.app-content-wrapper .form-group > label,
+.app-content-wrapper .control-label {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.app-content-wrapper .form-group {
+  margin-bottom: 14px;
+}
+
+.app-content-wrapper a.label.xiugai,
+.app-content-wrapper a.label.xinangqing {
+  background: #e8f3ff;
+  border-radius: var(--radius-sm);
+  color: #2d7edb;
+  padding: 5px 9px;
+}
+
+.app-content-wrapper a.label.shanchu {
+  background: #feeff0;
+  border-radius: var(--radius-sm);
+  color: #e4565b;
+  margin-left: 6px;
+  padding: 5px 9px;
+}
+
+.app-content-wrapper td[style*="color: red"],
+.app-content-wrapper td > span.ired {
+  color: #e4565b !important;
+}
+
+.app-content-wrapper a {
+  color: var(--text-regular);
+}
+
+.app-content-wrapper a:hover {
+  text-decoration: none;
+}
